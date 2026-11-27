@@ -6,12 +6,13 @@
   "sha256": "9d4c0d36457c5d1c42f90c0f166ad18d71d8d9cd038383b0c05313c5da74078b",
   "sizeBytes": 71175400,
   "notes": [
-    "Marka can now update itself, like Google Play: see what's new, download in the background, install with one tap",
-    "A friendlier camera screen that tells you what to do",
-    "Clearer Backup reminders, with a one-tap fix when notifications are blocked",
-    "Redesigned About, My DepEd forms and My answer sheets screens",
-    "Class standing, item analysis and answer comparison explained step by step in the in-app guide",
-    "Lessons 5 and 6 re-recorded for the new screens"
+    "Marka is an offline written-assessment companion built for Filipino teachers",
+    "Organise exams by subject, import your class roster, and scan answer sheets using your school's layout",
+    "Marka reviews each sheet, flags doubtful entries, and connects every score to the right student",
+    "See results by student or class, identify missing papers, review item analysis, and track mastery of embedded DepEd MELCs",
+    "Produce individual, class and school reports, or let Marka fill your own Excel forms",
+    "Backup management, restoration guidance and password-protected exports keep a term's work from being trapped on one phone",
+    "New Settings \u2192 App updates: new versions download in the background and install with one tap"
   ],
   "mandatory": false,
   "minAndroid": 26
