@@ -44,3 +44,16 @@
   }, { threshold: 0.12 });
   items.forEach(function (n) { io.observe(n); });
 })();
+
+/* The Marka logo returns to the top of the home page (the header is sticky, so a plain #top link does nothing). */
+(function () {
+  var b = document.querySelector("a.brand");
+  if (!b) return;
+  b.addEventListener("click", function (e) {
+    var home = !/tour\.html|tutorials\.html/.test(location.pathname);
+    if (!home) return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (err) {}
+  });
+})();
