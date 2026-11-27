@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick tour — Marka</title>
+  <meta name="description" content="A quick look at what you get with Marka: your classes, exams, scanning, results, analytics, reports and backups.">
+  <meta name="theme-color" content="#03045E">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A quick tour of Marka">
+  <meta property="og:description" content="What you get with Marka, in eight short clips.">
+  <meta property="og:image" content="https://gillbatesx.github.io/marka/assets/social.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="Marka home">
+      <img src="assets/logo.png" width="36" height="36" alt="" class="brand-logo">
+      <span>Marka</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#screens">Screens</a>
+      <a href="tour.html" aria-current="page">Tour</a>
+      <a href="./#install">Install</a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-accent btn-sm" href="./#install">Download</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Quick tour</p>
+      <h1>See what you get with Marka.</h1>
+      <p class="lead">Eight short clips from the real app. Scanning is only the start: most of what you get comes <strong>after</strong> it, in results, analytics, reports and backups.</p>
+    </div>
+  </section>
+
+  <section class="section tint-soft">
+    <div class="wrap player-grid">
+      <div class="player-col">
+        <div class="phone player-phone">
+          <video id="clip" muted playsinline autoplay preload="auto" poster="tour/home.webp" aria-label="A short clip of the app" width="360" height="808">
+            <source src="tour/home.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="lesson-col">
+        <p class="eyebrow dark" id="t-eyebrow">1 of 8</p>
+        <h2 id="t-title"></h2>
+        <p class="sub left" id="t-blurb"></p>
+        <div class="tour-dots" id="t-dots" role="tablist" aria-label="Tour steps"></div>
+        <div class="player-actions">
+          <button class="btn btn-ghost" id="t-prev" type="button">← Back</button>
+          <button class="btn btn-accent" id="t-next" type="button">Next →</button>
+          <button class="btn btn-ghost" id="t-pause" type="button" aria-pressed="false">Pause</button>
+        </div>
+        <p class="small muted">The clips play on their own, one after another. Tap a number to jump.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow dark">Ready?</p>
+        <h2>Free for 14 days, with everything on.</h2>
+        <p class="sub">Every account starts with a 14-day trial of full Premium. After that you keep the Free plan. Marka works offline, and your records stay on your phone.</p>
+      </header>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-accent btn-lg" href="./#install">Download for Android</a>
+      </div>
+      <p class="center muted small" style="margin-top:18px">Prefer to learn by doing? Nine short voice-over lessons are built into the app, under <em>Settings → How to use Marka</em>, and they play without internet.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="assets/logo.png" width="40" height="40" alt="" class="brand-logo">
+      <div>
+        <strong>Marka</strong>
+        <span>Made by Avincus Software Development Services, Philippines</span>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="https://gillbatesx.github.io/marka-legal/privacy.html">Privacy Policy</a>
+      <a href="https://gillbatesx.github.io/marka-legal/terms.html">Terms of Service</a>
+      <a href="https://gillbatesx.github.io/marka-legal/delete-account.html">Delete your account</a>
+      <a href="mailto:avincus.softwaredevelopment@gmail.com?subject=Marka%20feedback">Email support</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+var STEPS = [
+  { f: "home", title: "Your classes and subjects, in one place", blurb: "Set up each class once and use it in every subject. See the school year, the terms and every class's average at a glance." },
+  { f: "exam", title: "Create an exam and its answer key", blurb: "Name it, choose the questions and answer choices, then set the key by tapping, importing it or tagging each item to a MELC." },
+  { f: "print", title: "Print answer sheets Marka can read", blurb: "One sheet per exam, with corner marks and a QR code. Print it once and use it again." },
+  { f: "scan", title: "Scan, and check what is unclear", blurb: "Photograph each filled sheet. Marka reads it and asks you to settle only the answers it is unsure of." },
+  { f: "results", title: "Results the moment you finish", blurb: "Scores by class and student, and who has not been scanned yet, so no paper goes missing." },
+  { f: "analytics", title: "Analytics that show what to teach next", blurb: "Class standing, proficiency levels and every question in detail, with the male and female breakdown." },
+  { f: "reports", title: "Reports and DepEd forms, filled for you", blurb: "Item analysis, mastery tables, individual, class and school reports. Bring your own Excel form and Marka fills it in." },
+  { f: "backup", title: "Backups that keep your records safe", blurb: "A password-protected backup of everything, a gentle weekly reminder, and a recycle bin for anything you delete." }
+];
+var $ = function (id) { return document.getElementById(id); };
+var v = $("clip"), cur = 0, paused = false;
+$("t-dots").innerHTML = STEPS.map(function (s, i) { return '<button type="button" role="tab" class="tdot" data-i="' + i + '" aria-label="Step ' + (i + 1) + ': ' + s.title + '">' + (i + 1) + '</button>'; }).join("");
+function go(i, fromEnd) {
+  cur = (i + STEPS.length) % STEPS.length; var s = STEPS[cur];
+  v.poster = "tour/" + s.f + ".webp"; v.src = "tour/" + s.f + ".mp4"; v.load();
+  if (!paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  $("t-eyebrow").textContent = (cur + 1) + " of " + STEPS.length;
+  $("t-title").textContent = s.title; $("t-blurb").textContent = s.blurb;
+  Array.prototype.forEach.call(document.querySelectorAll(".tdot"), function (b, k) { b.classList.toggle("on", k === cur); b.setAttribute("aria-selected", k === cur ? "true" : "false"); });
+  try { history.replaceState(null, "", "#" + (cur + 1)); } catch (e) {}
+}
+$("t-dots").addEventListener("click", function (e) { var b = e.target.closest(".tdot"); if (b) go(Number(b.dataset.i)); });
+$("t-next").addEventListener("click", function () { go(cur + 1); });
+$("t-prev").addEventListener("click", function () { go(cur - 1); });
+$("t-pause").addEventListener("click", function () {
+  paused = !paused; this.textContent = paused ? "Play" : "Pause"; this.setAttribute("aria-pressed", paused);
+  if (paused) v.pause(); else v.play().catch(function () {});
+});
+v.addEventListener("ended", function () { if (!paused) go(cur + 1); });
+var m = /#(\d+)/.exec(location.hash); go(m && STEPS[Number(m[1]) - 1] ? Number(m[1]) - 1 : 0);
+(function () {
+  var items = document.querySelectorAll(".reveal");
+  var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (calm) { v.removeAttribute("autoplay"); paused = true; $("t-pause").textContent = "Play"; v.pause(); }
+  if (!("IntersectionObserver" in window) || calm) { Array.prototype.forEach.call(items, function (n) { n.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  Array.prototype.forEach.call(items, function (n) { io.observe(n); });
+})();
+</script>
+</body>
+</html>
