@@ -101,15 +101,15 @@
 <script>
 /* The nine lessons, the same ones that are inside the app (Settings > How to use Marka). */
 var LESSONS = [
-  { n: 1, title: "Subjects and your home screen", s: 153, blurb: "Your classes and subjects in one place, by school year and term: add, sort, search, and the backup reminder bell.", ch: ["Welcome to Marka", "Subject folders", "School years and terms"] },
-  { n: 2, title: "Classes and your class list", s: 175, blurb: "Add a class once and use it in every subject; add students, search, and tag male or female.", ch: ["Classes", "Your class list"] },
-  { n: 3, title: "Create an exam and its answer key", s: 173, blurb: "Name it, choose the answers, and set the key by tapping or by importing it.", ch: ["Create an exam", "The answer key and MELCs", "Shuffled versions"] },
-  { n: 4, title: "Print the answer sheets", s: 82, blurb: "One sheet per exam, with a QR code Marka can read.", ch: ["Print the answer sheets", "Reusable blank sheets", "Use your own answer sheet"] },
-  { n: 5, title: "Scan and check a sheet", s: 140, blurb: "The camera screen, and how Marka asks you to check an unclear sheet.", ch: ["Scan and grade", "Check a sheet"] },
-  { n: 6, title: "Results and analytics", s: 172, blurb: "Scores by class, class standing, every question in detail, and the male and female breakdown.", ch: ["See the results", "Analytics"], after: true },
-  { n: 7, title: "Reports, forms and student records", s: 184, blurb: "Share results, keep up with DepEd updates, and follow each learner.", ch: ["Reports and DepEd forms"], after: true },
-  { n: 8, title: "Backups and the recycle bin", s: 143, blurb: "Keep your data safe, and bring it back.", ch: ["Backups", "Recycle bin, language and security"], after: true },
-  { n: 9, title: "Free trial and Premium", s: 104, blurb: "14 days of full Premium, then the Free plan, and what Premium adds.", ch: ["Free and Premium", "When something goes wrong"] }
+  { n: 1, title: "Subjects and your home screen", s: 122, blurb: "Your classes and subjects in one place, by school year and term: add, sort, search, and the backup reminder bell.", ch: ["Welcome to Marka", "Subject folders", "School years and terms"] },
+  { n: 2, title: "Classes and your class list", s: 142, blurb: "Add a class once and use it in every subject; add students, search, and tag male or female.", ch: ["Classes", "Your class list"] },
+  { n: 3, title: "Create an exam and its answer key", s: 145, blurb: "Name it, choose the answers, and set the key by tapping or by importing it.", ch: ["Create an exam", "The answer key and MELCs", "Shuffled versions"] },
+  { n: 4, title: "Print the answer sheets", s: 161, blurb: "One sheet per exam, with a QR code Marka can read.", ch: ["Print the answer sheets", "Reusable blank sheets", "Use your own answer sheet"] },
+  { n: 5, title: "Scan and check a sheet", s: 146, blurb: "The camera screen, and how Marka asks you to check an unclear sheet.", ch: ["Scan and grade", "Check a sheet"] },
+  { n: 6, title: "Results and analytics", s: 179, blurb: "Scores by class, class standing, every question in detail, and the male and female breakdown.", ch: ["See the results", "Analytics"], after: true },
+  { n: 7, title: "Reports, forms and student records", s: 180, blurb: "Share results, keep up with DepEd updates, and follow each learner.", ch: ["Reports and DepEd forms"], after: true },
+  { n: 8, title: "Backups and the recycle bin", s: 165, blurb: "Keep your data safe, and bring it back.", ch: ["Backups", "Recycle bin, language and security"], after: true },
+  { n: 9, title: "Free trial and Premium", s: 107, blurb: "14 days of full Premium, then the Free plan, and what Premium adds.", ch: ["Free and Premium", "When something goes wrong"] }
 ];
 var $ = function (id) { return document.getElementById(id); };
 var len = function (s) { return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); };
