@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video tutorials — Marka</title>
+  <meta name="description" content="Nine short video lessons with a voice-over: set up your classes, create exams, and learn what Marka tells you after the scan — results, analytics, reports, forms and backups.">
+  <meta name="theme-color" content="#03045E">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marka video tutorials">
+  <meta property="og:description" content="Nine short video lessons with a voice-over, from setting up your classes to reports, forms and backups.">
+  <meta property="og:image" content="https://gillbatesx.github.io/marka/assets/social.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="Marka home">
+      <img src="assets/logo.png" width="36" height="36" alt="" class="brand-logo">
+      <span>Marka</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#screens">Screens</a>
+      <a href="tutorials.html" aria-current="page">Tutorials</a>
+      <a href="./#install">Install</a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-accent btn-sm" href="./#install">Download</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Video tutorials</p>
+      <h1>Learn Marka in short lessons.</h1>
+      <p class="lead">Nine short videos with a voice-over, in the order you will use them. Most of them are about what comes <strong>after</strong> the scan: results, analytics, reports, forms and backups.</p>
+    </div>
+  </section>
+
+  <section class="section tint-soft">
+    <div class="wrap player-grid">
+      <div class="player-col">
+        <div class="phone player-phone">
+          <video id="player" controls playsinline preload="metadata" poster="videos/lesson-1.webp" aria-label="Lesson video">
+            <source src="videos/lesson-1.mp4" type="video/mp4">
+            Your browser can't play this video. <a href="videos/lesson-1.mp4">Download it</a> instead.
+          </video>
+        </div>
+      </div>
+      <div class="lesson-col">
+        <p class="eyebrow dark" id="now-eyebrow">Lesson 1 of 9</p>
+        <h2 id="now-title">Subjects and your home screen</h2>
+        <p class="sub left" id="now-blurb"></p>
+        <ul class="chapters" id="now-chapters" aria-label="In this lesson"></ul>
+        <div class="player-actions">
+          <button class="btn btn-accent" id="next-btn" type="button">Next lesson →</button>
+          <span class="muted small" id="now-length"></span>
+        </div>
+        <p class="small muted">The same lessons are inside the app, under <em>Settings → How to use Marka</em>, and they play without internet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow dark">All lessons</p>
+        <h2>Pick up where you left off.</h2>
+      </header>
+      <ol class="lessons" id="lessons"></ol>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <img src="assets/logo.png" width="40" height="40" alt="" class="brand-logo">
+      <div>
+        <strong>Marka</strong>
+        <span>Made by Avincus Software Development Services, Philippines</span>
+      </div>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="https://gillbatesx.github.io/marka-legal/privacy.html">Privacy Policy</a>
+      <a href="https://gillbatesx.github.io/marka-legal/delete-account.html">Delete your account</a>
+      <a href="mailto:avincus.softwaredevelopment@gmail.com?subject=Marka%20feedback">Email support</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+/* The nine lessons, the same ones that are inside the app (Settings > How to use Marka). */
+var LESSONS = [
+  { n: 1, title: "Subjects and your home screen", s: 153, blurb: "Your classes and subjects in one place, by school year and term: add, sort, search, and the backup reminder bell.", ch: ["Welcome to Marka", "Subject folders", "School years and terms"] },
+  { n: 2, title: "Classes and your class list", s: 175, blurb: "Add a class once and use it in every subject; add students, search, and tag male or female.", ch: ["Classes", "Your class list"] },
+  { n: 3, title: "Create an exam and its answer key", s: 173, blurb: "Name it, choose the answers, and set the key by tapping or by importing it.", ch: ["Create an exam", "The answer key and MELCs", "Shuffled versions"] },
+  { n: 4, title: "Print the answer sheets", s: 82, blurb: "One sheet per exam, with a QR code Marka can read.", ch: ["Print the answer sheets", "Reusable blank sheets", "Use your own answer sheet"] },
+  { n: 5, title: "Scan and check a sheet", s: 140, blurb: "The camera screen, and how Marka asks you to check an unclear sheet.", ch: ["Scan and grade", "Check a sheet"] },
+  { n: 6, title: "Results and analytics", s: 172, blurb: "Scores by class, class standing, every question in detail, and the male and female breakdown.", ch: ["See the results", "Analytics"], after: true },
+  { n: 7, title: "Reports, forms and student records", s: 184, blurb: "Share results, keep up with DepEd updates, and follow each learner.", ch: ["Reports and DepEd forms"], after: true },
+  { n: 8, title: "Backups and the recycle bin", s: 143, blurb: "Keep your data safe, and bring it back.", ch: ["Backups", "Recycle bin, language and security"], after: true },
+  { n: 9, title: "Free trial and Premium", s: 104, blurb: "14 days of full Premium, then the Free plan, and what Premium adds.", ch: ["Free and Premium", "When something goes wrong"] }
+];
+var $ = function (id) { return document.getElementById(id); };
+var len = function (s) { return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); };
+var current = 1;
+
+function show(n, play) {
+  var l = LESSONS[n - 1]; if (!l) return; current = n;
+  var v = $("player");
+  v.poster = "videos/lesson-" + n + ".webp";
+  v.src = "videos/lesson-" + n + ".mp4";
+  v.load(); if (play) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  $("now-eyebrow").textContent = "Lesson " + n + " of " + LESSONS.length;
+  $("now-title").textContent = l.title;
+  $("now-blurb").textContent = l.blurb;
+  $("now-length").textContent = len(l.s) + " min";
+  $("now-chapters").innerHTML = l.ch.map(function (c) { return "<li>" + c + "</li>"; }).join("");
+  var nb = $("next-btn"); nb.style.visibility = n < LESSONS.length ? "visible" : "hidden";
+  Array.prototype.forEach.call(document.querySelectorAll(".lesson-item"), function (el) {
+    var on = Number(el.dataset.n) === n; el.classList.toggle("on", on); el.setAttribute("aria-current", on ? "true" : "false");
+  });
+  try { history.replaceState(null, "", "#lesson-" + n); } catch (e) {}
+}
+
+$("lessons").innerHTML = LESSONS.map(function (l) {
+  return '<li><button type="button" class="lesson-item" data-n="' + l.n + '">' +
+    '<img src="videos/lesson-' + l.n + '.webp" alt="" width="72" height="162" loading="lazy">' +
+    '<span class="li-body"><span class="li-n">Lesson ' + l.n + (l.after ? ' · after the scan' : '') + '</span>' +
+    '<span class="li-t">' + l.title + '</span><span class="li-b">' + l.blurb + '</span></span>' +
+    '<span class="li-len">' + len(l.s) + '</span></button></li>';
+}).join("");
+$("lessons").addEventListener("click", function (e) {
+  var b = e.target.closest(".lesson-item"); if (!b) return;
+  show(Number(b.dataset.n), true);
+  $("player").scrollIntoView({ behavior: "smooth", block: "center" });
+});
+$("next-btn").addEventListener("click", function () { show(current + 1, true); });
+$("player").addEventListener("ended", function () { if (current < LESSONS.length) $("next-btn").focus(); });
+
+var m = /lesson-(\d+)/.exec(location.hash);
+show(m && LESSONS[Number(m[1]) - 1] ? Number(m[1]) : 1, false);
+
+(function () {
+  var items = document.querySelectorAll(".reveal");
+  var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!("IntersectionObserver" in window) || calm) { Array.prototype.forEach.call(items, function (n) { n.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  Array.prototype.forEach.call(items, function (n) { io.observe(n); });
+})();
+</script>
+</body>
+</html>
