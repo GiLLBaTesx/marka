@@ -57,3 +57,36 @@
     try { history.replaceState(null, "", location.pathname + location.search); } catch (err) {}
   });
 })();
+
+/* Screens showcase: tabs switch the large phone; it advances by itself until the visitor picks one. */
+(function () {
+  var box = document.getElementById("showcase");
+  if (!box) return;
+  var tabs = Array.prototype.slice.call(box.querySelectorAll(".sc-tab"));
+  var imgs = Array.prototype.slice.call(box.querySelectorAll(".sc-img"));
+  var cap = document.getElementById("sc-caption");
+  var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cur = 0, timer = null, touched = false;
+  function show(i, user) {
+    cur = (i + tabs.length) % tabs.length;
+    tabs.forEach(function (t, k) { var on = k === cur; t.classList.toggle("on", on); t.setAttribute("aria-selected", on ? "true" : "false"); t.tabIndex = on ? 0 : -1; });
+    imgs.forEach(function (m, k) { m.classList.toggle("on", k === cur); });
+    var d = tabs[cur].querySelector(".sc-b span"); if (cap && d) cap.textContent = d.textContent;
+    if (user) { touched = true; stop(); var t = tabs[cur]; if (t.scrollIntoView && window.innerWidth <= 860) t.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" }); }
+  }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function start() { if (calm || touched || timer) return; timer = setInterval(function () { if (!document.hidden) show(cur + 1, false); }, 5000); }
+  tabs.forEach(function (t, k) {
+    t.addEventListener("click", function () { show(k, true); });
+    t.addEventListener("keydown", function (e) {
+      var n = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
+      if (n) { e.preventDefault(); show(cur + n, true); tabs[cur].focus(); }
+    });
+  });
+  box.addEventListener("mouseenter", stop);
+  box.addEventListener("mouseleave", start);
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) start(); else stop(); }); }, { threshold: 0.4 }).observe(box);
+  } else start();
+  show(0, false);
+})();

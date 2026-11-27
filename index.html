@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261128004209">
+  <link rel="stylesheet" href="styles.css?v=20261128004751">
 </head>
 <body>
 
@@ -126,24 +126,24 @@
         <h2>What you see once the scanning is done.</h2>
         <p class="sub">Real screens from Marka, shown with sample data.</p>
       </header>
-      <div class="shots">
-        <figure class="shot reveal">
-          <div class="phone"><img src="assets/results.webp" alt="Marka exam results showing the class summary and which students are not yet scanned" width="270" height="606" loading="lazy"></div>
-          <figcaption><strong>Results</strong><span>Class summary by student and class, with the missing papers called out.</span></figcaption>
-        </figure>
-        <figure class="shot reveal">
-          <div class="phone"><img src="assets/analytics.webp" alt="Marka analytics showing class standing and proficiency levels" width="270" height="606" loading="lazy"></div>
-          <figcaption><strong>Analytics</strong><span>Class standing, passing rate and proficiency levels.</span></figcaption>
-        </figure>
-        <figure class="shot reveal">
-          <div class="phone"><img src="assets/track.webp" alt="Marka's track record for one learner: average, best and lowest scores, and a chart of every exam against the class average and the pass mark" width="270" height="606" loading="lazy"></div>
-          <figcaption><strong>Track record</strong><span>One learner's average, best and lowest, and every exam against the class and the pass mark.</span></figcaption>
-        </figure>
-        <figure class="shot reveal">
-          <div class="phone"><img src="assets/home.webp" alt="Marka home screen listing classes and subjects for the school year" width="270" height="606" loading="lazy"></div>
-          <figcaption><strong>Classes &amp; subjects</strong><span>Your school year, terms and classes, with each class's average.</span></figcaption>
-        </figure>
+      <div class="showcase reveal" id="showcase">
+        <div class="sc-tabs" role="tablist" aria-label="Marka screens">
+          <button type="button" role="tab" class="sc-tab on" id="sc-t0" aria-selected="true" aria-controls="sc-p0" data-i="0"><span class="sc-n">1</span><span class="sc-b"><strong>Results</strong><span>Class summary by student and class, with the missing papers called out.</span></span></button>
+          <button type="button" role="tab" class="sc-tab" id="sc-t1" aria-selected="false" aria-controls="sc-p1" data-i="1"><span class="sc-n">2</span><span class="sc-b"><strong>Analytics</strong><span>Class standing, passing rate and proficiency levels.</span></span></button>
+          <button type="button" role="tab" class="sc-tab" id="sc-t2" aria-selected="false" aria-controls="sc-p2" data-i="2"><span class="sc-n">3</span><span class="sc-b"><strong>Track record</strong><span>One learner's average, best and lowest, and every exam against the class and the pass mark.</span></span></button>
+          <button type="button" role="tab" class="sc-tab" id="sc-t3" aria-selected="false" aria-controls="sc-p3" data-i="3"><span class="sc-n">4</span><span class="sc-b"><strong>Classes & subjects</strong><span>Your school year, terms and classes, with each class's average.</span></span></button>
+        </div>
+        <div class="sc-stage">
+          <div class="phone sc-phone">
+            <img class="sc-img on" id="sc-p0" role="tabpanel" aria-labelledby="sc-t0" src="assets/results.webp" alt="Marka exam results showing the class summary and which students are not yet scanned" width="270" height="606" loading="eager">
+            <img class="sc-img" id="sc-p1" role="tabpanel" aria-labelledby="sc-t1" src="assets/analytics.webp" alt="Marka analytics showing class standing and proficiency levels" width="270" height="606" loading="lazy">
+            <img class="sc-img" id="sc-p2" role="tabpanel" aria-labelledby="sc-t2" src="assets/track.webp" alt="Marka's track record for one learner, with a chart of every exam against the class average and the pass mark" width="270" height="606" loading="lazy">
+            <img class="sc-img" id="sc-p3" role="tabpanel" aria-labelledby="sc-t3" src="assets/home.webp" alt="Marka home screen listing classes and subjects for the school year" width="270" height="606" loading="lazy">
+          </div>
+          <p class="sc-caption" id="sc-caption" aria-live="polite"></p>
+        </div>
       </div>
+      <p class="sc-hint small muted center">Choose a screen to see it. They change by themselves until you do.</p>
     </div>
   </section>
 
@@ -311,6 +311,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=20261128004209"></script>
+<script src="app.js?v=20261128004751"></script>
 </body>
 </html>
