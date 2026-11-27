@@ -1,10 +1,10 @@
 {
   "versionCode": 2,
-  "versionName": "1.1",
+  "versionName": "1.0",
   "releasedAt": "2026-11-27",
-  "apkUrl": "https://github.com/GiLLBaTesx/marka/releases/download/v1.1/Marka.apk",
-  "sha256": "9d4c0d36457c5d1c42f90c0f166ad18d71d8d9cd038383b0c05313c5da74078b",
-  "sizeBytes": 71175400,
+  "apkUrl": "https://github.com/GiLLBaTesx/marka/releases/download/v1.0/Marka.apk",
+  "sha256": "8ac84c7702ee04c5b743434850be6cb9e2cff05d5de5c3386a197e8247c0ff1c",
+  "sizeBytes": 71191788,
   "notes": [
     "Marka is an offline written-assessment companion built for Filipino teachers",
     "Organise exams by subject, import your class roster, and scan answer sheets using your school's layout",
@@ -12,7 +12,8 @@
     "See results by student or class, identify missing papers, review item analysis, and track mastery of embedded DepEd MELCs",
     "Produce individual, class and school reports, or let Marka fill your own Excel forms",
     "Backup management, restoration guidance and password-protected exports keep a term's work from being trapped on one phone",
-    "New Settings \u2192 App updates: new versions download in the background and install with one tap"
+    "Nine short video lessons with a voice-over are built in, under Settings \u2192 How to use Marka",
+    "Settings \u2192 App updates keeps Marka current: it checks once a day and tells you quietly when a new version is ready"
   ],
   "mandatory": false,
   "minAndroid": 26

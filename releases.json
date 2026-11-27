@@ -1,7 +1,7 @@
 [
   {
     "versionCode": 2,
-    "versionName": "1.1",
+    "versionName": "1.0",
     "releasedAt": "2026-11-27",
     "notes": [
       "Marka is an offline written-assessment companion built for Filipino teachers",
@@ -10,7 +10,8 @@
       "See results by student or class, identify missing papers, review item analysis, and track mastery of embedded DepEd MELCs",
       "Produce individual, class and school reports, or let Marka fill your own Excel forms",
       "Backup management, restoration guidance and password-protected exports keep a term's work from being trapped on one phone",
-      "New Settings \u2192 App updates: new versions download in the background and install with one tap"
+      "Nine short video lessons with a voice-over are built in, under Settings \u2192 How to use Marka",
+      "Settings \u2192 App updates keeps Marka current: it checks once a day and tells you quietly when a new version is ready"
     ]
   }
 ]
