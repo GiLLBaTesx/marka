@@ -1,0 +1,18 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1",
+  "releasedAt": "2026-11-27",
+  "apkUrl": "https://github.com/GiLLBaTesx/marka/releases/download/v1.1/Marka.apk",
+  "sha256": "9d4c0d36457c5d1c42f90c0f166ad18d71d8d9cd038383b0c05313c5da74078b",
+  "sizeBytes": 71175400,
+  "notes": [
+    "Marka can now update itself, like Google Play: see what's new, download in the background, install with one tap",
+    "A friendlier camera screen that tells you what to do",
+    "Clearer Backup reminders, with a one-tap fix when notifications are blocked",
+    "Redesigned About, My DepEd forms and My answer sheets screens",
+    "Class standing, item analysis and answer comparison explained step by step in the in-app guide",
+    "Lessons 5 and 6 re-recorded for the new screens"
+  ],
+  "mandatory": false,
+  "minAndroid": 26
+}
