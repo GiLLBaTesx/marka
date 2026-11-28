@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment — Marka</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#03045E">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F4F9FF; color: #141A32; font-family: Inter, system-ui, sans-serif; padding: 24px; }
+    main { max-width: 440px; text-align: center; background: #fff; border-radius: 24px; padding: 36px 28px; box-shadow: 0 12px 32px rgba(20,26,50,.10); }
+    img { width: 72px; height: 72px; border-radius: 18px; }
+    h1 { margin: 16px 0 8px; font-size: 1.6rem; color: #03045E; }
+    p { color: #434656; line-height: 1.6; margin: 8px 0; }
+    a.btn { display: inline-block; margin-top: 18px; padding: 14px 22px; border-radius: 14px; background: #0047AB; color: #fff; font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+<main>
+  <img src="assets/logo.png" alt="">
+  <h1 id="h">Thank you</h1>
+  <p id="p">Your payment is being confirmed. Open Marka: Premium turns on as soon as PayMongo confirms it, usually within a minute.</p>
+  <p class="small" id="q">If it has not turned on after an hour, email <a href="mailto:avincus.softwaredevelopment@gmail.com?subject=Marka%20payment">avincus.softwaredevelopment@gmail.com</a> with your payment reference.</p>
+  <a class="btn" href="./">Back to the Marka website</a>
+</main>
+<script>
+if (/[?&]cancelled=1/.test(location.search)) {
+  document.getElementById("h").textContent = "Payment cancelled";
+  document.getElementById("p").textContent = "Nothing was charged. Open Marka and choose a plan whenever you are ready.";
+  document.getElementById("q").hidden = true;
+}
+</script>
+</body>
+</html>
