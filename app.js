@@ -26,14 +26,16 @@
 
   fetch("releases.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (list) {
     var box = $("#releases");
-    if (!list || !list.length) { box.innerHTML = '<p class="muted">No releases yet.</p>'; return; }
+    // Release notes only appear once there is a history. The first release's notes are the feature list again.
+    var sec = box.closest("section");
+    if (!list || list.length < 2) { if (sec) sec.hidden = true; return; }
     box.innerHTML = list.map(function (r, i) {
       return '<article class="release"><div class="release-head"><h3>Marka ' + esc(r.versionName) + "</h3>" +
         (i === 0 ? '<span class="tag">Latest</span>' : "") +
         (r.releasedAt ? "<time>" + esc(date(r.releasedAt)) + "</time>" : "") + "</div><ul>" +
         (r.notes || []).map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("") + "</ul></article>";
     }).join("");
-  }).catch(function () { $("#releases").innerHTML = '<p class="muted">Release notes could not be loaded.</p>'; });
+  }).catch(function () { var sec = $("#releases").closest("section"); if (sec) sec.hidden = true; });
 
   // Reveal on scroll (everything is simply visible when motion is reduced or the browser has no observer).
   var items = $$(".reveal");
